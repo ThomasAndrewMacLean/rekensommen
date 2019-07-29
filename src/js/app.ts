@@ -1,4 +1,3 @@
-import '../css/style.css';
 import { SettingsType } from './types/settings';
 import { form, name, startBtn, ans1, ans2, ans3, question, score } from './dom';
 
