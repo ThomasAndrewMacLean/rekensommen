@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "parcel src/index.html",
         "build": "rm -rf ./dist && babel src --out-dir dist --extensions '.ts,.tsx' && node ./builder && cp -r ./src/css ./dist/css",
-        "build-parcel":"parcel build src/index.html",
+        "parcel-build": "parcel build src/index.html",
         "tsc": "tsc",
         "lint": "eslint"
     },
