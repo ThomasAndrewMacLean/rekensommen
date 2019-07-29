@@ -15,8 +15,23 @@ h1 {
     display: none;
 }
 
+input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 .settings-page {
+
     background: url('../annie-spratt-faAef6F6luc-unsplash.jpg');
+}
+
+form {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+}
+
+label {
+    display: flex;
 }
 
 .main-page {
@@ -24,6 +39,8 @@ h1 {
 }
 
 body {
+    font-family: 'Arimo', sans-serif;
+    font-size: 24px;
     overflow: hidden;
     transform: translateY(var(--page));
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -32,4 +49,7 @@ body {
 .page {
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
