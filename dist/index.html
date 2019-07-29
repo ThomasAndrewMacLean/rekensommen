@@ -6,12 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rekensommen</title>
-</head>
+<link rel="stylesheet" href="/app.652c5242.css"></head>
 
 <body>
-    <h1>Rekensommen</h1>
+    <div class="page settings-page">
+        <form id="userSettings">
+            <div class="formgroup">
+                <label for="name">Naam</label>
+                <input type="text" name="name" id="name" required="">
+            </div>
+            <div class="formgroup">
+                <label for="time_slow">🐌</label>
+                <input type="radio" name="time" value="slow" id="time_slow" checked="" required="">
+                <label for="time_fast">🚀</label>
+                <input type="radio" name="time" value="fast" id="time_fast" required="">
+            </div>
+            <div class="formgroup">
+                <label for="upperlimit">Hoogste getal</label>
+                <input type="number" value="15" name="upperlimit" id="upperlimit" required="">
+            </div>
+            <div class="formgroup">
+                <input type="submit" value="Ok">
+            </div>
+        </form>
+    </div>
+    <div class="page main-page">
+        <h1>Rekensommen</h1>
+        <h2>Score <span id="score">0/0</span></h2>
+        <button id="start-btn">START</button>
+        <span id="question"></span>
+        <button id="ans1" class="hide"></button>
+        <button id="ans2" class="hide"></button>
+        <button id="ans3" class="hide"></button>
+    </div>
 
-    <script src="./js/app.js"></script>
+
+    <script src="/app.652c5242.js"></script>
 </body>
 
 </html>
