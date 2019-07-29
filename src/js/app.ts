@@ -1,6 +1,8 @@
 import { SettingsType } from './types/settings';
 import { form, name, startBtn, ans1, ans2, ans3, question, score } from './dom';
 
+console.log('starting 🚀');
+
 // Get settings from local storage
 let settings: SettingsType | null = JSON.parse(localStorage.getItem('USER_SETTINGS') || '{}');
 
