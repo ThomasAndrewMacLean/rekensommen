@@ -1,16 +1,16 @@
 language: node_js
 node_js:
-- node
+    - node
 before_script:
-- npm install
+    - npm install
 script:
-- npm run build
+    - npm run parcel-build
 deploy:
-  provider: pages
-  local_dir: dist
-  skip-cleanup: true
-  repo: ThomasAndrewMacLean/rekensommen
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  target_branch: gh-pages
+    provider: pages
+    local_dir: dist
+    skip-cleanup: true
+    repo: ThomasAndrewMacLean/rekensommen
+    github-token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
+    target_branch: gh-pages
 on:
     branch: master
