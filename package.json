@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "parcel src/index.html",
-        "build": "rm -rf ./dist && babel src --out-dir dist --extensions '.ts,.tsx' && cp ./src/index.html ./dist/index.html",
+        "build": "rm -rf ./dist && babel src --out-dir dist --extensions '.ts,.tsx' && node ./builder",
         "tsc": "tsc",
         "lint": "eslint"
     },
