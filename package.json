@@ -1,0 +1,37 @@
+{
+  "name": "rekensommen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "babel --watch src ---out-dir dist --extensions '.ts,.tsx'",
+    "build": "babel src --out-dir dist --extensions '.ts,.tsx'",
+    "tsc": "tsc",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasAndrewMacLean/rekensommen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThomasAndrewMacLean/rekensommen/issues"
+  },
+  "homepage": "https://github.com/ThomasAndrewMacLean/rekensommen#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3"
+  }
+}
