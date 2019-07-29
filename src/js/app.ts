@@ -1,3 +1,3 @@
-console.log("hello world")
+import '../css/style.css';
 
-const x = 124
+console.log('hello world!');
