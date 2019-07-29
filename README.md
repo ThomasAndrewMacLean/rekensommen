@@ -5,3 +5,6 @@
 https://dev.to/robertcoopercode/using-eslint-and-prettier-in-a-typescript-project-53jb
 
 https://iamturns.com/typescript-babel/
+
+https://travis-ci.community/t/failed-to-deploy-because-of-ruby-error/1143/13
+!! create and push branch gh-pages first before travis will work
