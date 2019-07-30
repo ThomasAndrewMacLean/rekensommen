@@ -1,5 +1,5 @@
 import { SettingsType } from './types/settings';
-import { wrapper, form, name, startBtn, ans1, ans2, ans3, question, score } from './dom';
+import { wrapper, form, name, startBtn, ans1, ans2, ans3, question, score, progress } from './dom';
 
 console.log('starting 🚀');
 
@@ -36,6 +36,22 @@ const getSum = (max: number): { text: string; solution: number } => {
 
     return { text: sum1.toString() + ' + ' + sum2.toString(), solution: sum1 + sum2 };
 };
+let looper;
+const answer = (e: any): void => {
+    TOTAL++;
+    if (e && e.target.classList.contains('correct')) {
+        SCORE++;
+    }
+    progress.setAttribute('value', '100');
+    clearInterval(looper);
+
+    ans1.classList.remove('correct');
+    ans2.classList.remove('correct');
+    ans3.classList.remove('correct');
+
+    score.innerHTML = `${SCORE}/${TOTAL}`;
+    createExercise();
+};
 
 const createExercise = (): void => {
     if (!settings) return;
@@ -50,6 +66,22 @@ const createExercise = (): void => {
 
     answers[(rand + 1) % answers.length].innerHTML = (sum.solution + Math.floor(Math.random() * 10)).toString();
     answers[(rand + 2) % answers.length].innerHTML = (sum.solution + Math.floor(Math.random() * -10)).toString();
+
+    let ticker = settings.time === 'fast' ? 6 : 12;
+    let timeRemaining = 100;
+    const jumpTime = 100 / ticker;
+    progress.setAttribute('value', '100');
+
+    looper = setInterval(() => {
+        ticker--;
+        timeRemaining -= jumpTime;
+
+        if (timeRemaining < 0) {
+            answer(null);
+        } else {
+            progress.setAttribute('value', Math.floor(timeRemaining).toString());
+        }
+    }, 1000);
 };
 
 startBtn.addEventListener('click', () => {
@@ -60,20 +92,6 @@ startBtn.addEventListener('click', () => {
     ans3.classList.remove('hide');
     createExercise();
 });
-
-const answer = (e: any): void => {
-    TOTAL++;
-    if (e.target.classList.contains('correct')) {
-        SCORE++;
-    }
-
-    ans1.classList.remove('correct');
-    ans2.classList.remove('correct');
-    ans3.classList.remove('correct');
-
-    score.innerHTML = `${SCORE}/${TOTAL}`;
-    createExercise();
-};
 
 ans1.addEventListener('click', answer);
 ans2.addEventListener('click', answer);

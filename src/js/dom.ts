@@ -11,3 +11,5 @@ export const ans2: HTMLButtonElement = document.getElementById('ans2') as HTMLBu
 export const ans3: HTMLButtonElement = document.getElementById('ans3') as HTMLButtonElement;
 
 export const wrapper: HTMLDivElement = document.querySelector('.wrapper') as HTMLDivElement;
+
+export const progress: HTMLProgressElement = document.getElementById('progress') as HTMLProgressElement;
