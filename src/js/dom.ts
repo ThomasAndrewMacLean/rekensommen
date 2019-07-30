@@ -9,3 +9,5 @@ export const score: HTMLSpanElement = document.getElementById('score') as HTMLSp
 export const ans1: HTMLButtonElement = document.getElementById('ans1') as HTMLButtonElement;
 export const ans2: HTMLButtonElement = document.getElementById('ans2') as HTMLButtonElement;
 export const ans3: HTMLButtonElement = document.getElementById('ans3') as HTMLButtonElement;
+
+export const wrapper: HTMLDivElement = document.querySelector('.wrapper') as HTMLDivElement;

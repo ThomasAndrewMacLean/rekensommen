@@ -1,5 +1,5 @@
 import { SettingsType } from './types/settings';
-import { form, name, startBtn, ans1, ans2, ans3, question, score } from './dom';
+import { wrapper, form, name, startBtn, ans1, ans2, ans3, question, score } from './dom';
 
 console.log('starting 🚀');
 
@@ -54,6 +54,7 @@ const createExercise = (): void => {
 
 startBtn.addEventListener('click', () => {
     startBtn.classList.add('hide');
+    wrapper.classList.remove('hide');
     ans1.classList.remove('hide');
     ans2.classList.remove('hide');
     ans3.classList.remove('hide');
