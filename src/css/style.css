@@ -26,8 +26,7 @@ button {
 }
 
 .settings-page {
-    /* background: url('../annie-spratt-faAef6F6luc-unsplash.jpg'); */
-    background: linear-gradient(orangered, orange, green);
+    background: linear-gradient(30deg, lightgreen, white, lightblue);
     background-size: cover;
     background-blend-mode: multiply;
 }
@@ -35,10 +34,38 @@ button {
 form {
     background: rgba(255, 255, 255, 0.7);
     padding: 2rem;
+    width: 90vw;
+    max-width: 350px;
+    border-radius: 50px;
+    border: 2px solid lightgrey;
+    box-shadow: 2px 2px 20px 0px grey;
+}
+
+.formgroup {
+    padding: 1rem;
+}
+
+/* input[type="text"] {
+    width: 100%;
+
+    box-sizing: border-box;
+} */
+input[type="number"],
+input[type="text"],
+button[type="submit"] {
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+button[type="submit"] {
+    cursor: pointer;
+    
 }
 
 label {
-    display: flex;
+    /* display: flex; */
 }
 
 .main-page {
