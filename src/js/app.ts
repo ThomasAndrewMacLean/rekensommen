@@ -1,5 +1,5 @@
 import { SettingsType } from './types/settings';
-import { wrapper, form, name, startBtn, ans1, ans2, ans3, question, score, progress } from './dom';
+import { wrapper, form, name, startBtn, ans1, ans2, ans3, question, score, progress, hiddenBtn } from './dom';
 
 console.log('starting 🚀');
 
@@ -42,6 +42,7 @@ const answer = (e: any): void => {
     if (e && e.target.classList.contains('correct')) {
         SCORE++;
     }
+    hiddenBtn.focus();
     progress.setAttribute('value', '100');
     clearInterval(looper);
 

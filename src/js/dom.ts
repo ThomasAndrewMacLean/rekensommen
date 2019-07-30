@@ -2,6 +2,7 @@ export const form: HTMLFormElement = document.getElementById('userSettings') as 
 export const name: HTMLInputElement = document.getElementById('name') as HTMLInputElement;
 
 export const startBtn: HTMLButtonElement = document.getElementById('start-btn') as HTMLButtonElement;
+export const hiddenBtn: HTMLButtonElement = document.getElementById('hidden-btn') as HTMLButtonElement;
 
 export const question: HTMLSpanElement = document.getElementById('question') as HTMLSpanElement;
 export const score: HTMLSpanElement = document.getElementById('score') as HTMLSpanElement;

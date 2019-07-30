@@ -72,6 +72,11 @@ button[type="submit"] {
     background: linear-gradient(30deg, lightseagreen 1%, white, lightblue);
 }
 
+#hidden-btn {
+    position: absolute;
+    left: -100px;
+}
+
 body {
     color: #333;
     font-family: 'Arimo', sans-serif;
