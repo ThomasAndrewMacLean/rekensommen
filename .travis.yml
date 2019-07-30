@@ -12,5 +12,6 @@ deploy:
     repo: ThomasAndrewMacLean/rekensommen
     github-token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
     target_branch: gh-pages
+    fqdn: rekensommen.xyz
 on:
     branch: master
