@@ -56,9 +56,9 @@
     <script>
         if ('serviceWorker' in navigator) {
             console.log("🤖")
-
+            const sw = '/sw.js'
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register(sw)
                     .then((reg) => {
                         console.log('Service worker registered.', reg);
                     });

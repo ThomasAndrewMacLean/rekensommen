@@ -11,3 +11,5 @@ https://travis-ci.community/t/failed-to-deploy-because-of-ruby-error/1143/13
 
 
 https://developers.giphy.com/dashboard/
+
+sw hack: https://github.com/parcel-bundler/parcel/issues/2570
