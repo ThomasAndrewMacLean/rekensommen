@@ -26,7 +26,9 @@ button {
 }
 
 .settings-page {
-    background: linear-gradient(30deg, lightgreen, white, lightblue);
+    /* background: linear-gradient(30deg, lightgreen, white, lightblue); */
+    background: linear-gradient(30deg, lightseagreen 1%, white, lightblue);
+
     background-size: cover;
     background-blend-mode: multiply;
 }

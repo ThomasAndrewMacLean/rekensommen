@@ -31,11 +31,24 @@ form.addEventListener('submit', e => {
 });
 
 const getSum = (max: number): { text: string; solution: number } => {
-    const sum1 = max - Math.floor(Math.random() * max);
-    const sum2 = sum1 - Math.floor(Math.random() * sum1);
+    const sum1 = Math.floor(Math.random() * (max / 2) + 1);
+    const sum2 = Math.floor(Math.random() * (max / 2) + 1);
 
     return { text: sum1.toString() + ' + ' + sum2.toString(), solution: sum1 + sum2 };
 };
+
+const getWrongAnswers = (max: number, answer: number): number[] => {
+    let wrong1 = answer;
+    let wrong2 = answer;
+
+    while (wrong1 === answer || wrong2 === answer || wrong1 === wrong2) {
+        wrong1 = Math.floor(Math.random() * max + 1);
+        wrong2 = Math.floor(Math.random() * max + 1);
+    }
+
+    return [wrong1, wrong2];
+};
+
 let looper;
 const answer = (e: any): void => {
     TOTAL++;
@@ -65,8 +78,9 @@ const createExercise = (): void => {
     answers[rand].innerHTML = sum.solution.toString();
     answers[rand].classList.add('correct');
 
-    answers[(rand + 1) % answers.length].innerHTML = (sum.solution + Math.floor(Math.random() * 10)).toString();
-    answers[(rand + 2) % answers.length].innerHTML = (sum.solution + Math.floor(Math.random() * -10)).toString();
+    let wrongAnswers = getWrongAnswers(settings.upperlimit, sum.solution);
+    answers[(rand + 1) % answers.length].innerHTML = wrongAnswers[0].toString();
+    answers[(rand + 2) % answers.length].innerHTML = wrongAnswers[1].toString();
 
     let ticker = settings.time === 'fast' ? 6 : 12;
     let timeRemaining = 100;
