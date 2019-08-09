@@ -8,6 +8,7 @@
     <title>Rekensommen!</title>
     <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="manifest" href="./site.webmanifest">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
                 <button id="ans1" class="hide answer"></button>
                 <button id="ans2" class="hide answer"></button>
                 <button id="ans3" class="hide answer"></button>
-        <button id="hidden-btn"></button>
+                <button id="hidden-btn"></button>
             </div>
             <progress id="progress" max="100" value="70"></progress>
         </div>
@@ -50,6 +51,18 @@
 
 
     <script src="/js/app.ts"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            console.log("🤖")
+
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((reg) => {
+                        console.log('Service worker registered.', reg);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>
