@@ -36,7 +36,7 @@ button {
 form {
     background: rgba(255, 255, 255, 0.7);
     padding: 2rem;
-    width: 90vw;
+    width: 70vw;
     max-width: 350px;
     border-radius: 50px;
     border: 2px solid lightgrey;
@@ -45,6 +45,28 @@ form {
 
 .formgroup {
     padding: 1rem;
+}
+
+input[type="radio"]+label {
+    cursor: pointer;
+    position: relative;
+    margin: 0 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked+label::before {
+    border: 3px solid dimgray;
+    content: "";
+    width: 50px;
+    position: absolute;
+    height: 50px;
+    border-radius: 100%;
+    left: -8px;
+    bottom: -8px;
+
 }
 
 /* input[type="text"] {
