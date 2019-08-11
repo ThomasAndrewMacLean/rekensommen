@@ -1,5 +1,8 @@
 export const form: HTMLFormElement = document.getElementById('userSettings') as HTMLFormElement;
 export const name: HTMLInputElement = document.getElementById('name') as HTMLInputElement;
+export const upperlimit: HTMLInputElement = document.getElementById('upperlimit') as HTMLInputElement;
+export const timeSlow: HTMLInputElement = document.getElementById('time_slow') as HTMLInputElement;
+export const timeFast: HTMLInputElement = document.getElementById('time_fast') as HTMLInputElement;
 
 export const startBtn: HTMLButtonElement = document.getElementById('start-btn') as HTMLButtonElement;
 export const hiddenBtn: HTMLButtonElement = document.getElementById('hidden-btn') as HTMLButtonElement;

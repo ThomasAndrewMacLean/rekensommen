@@ -1,5 +1,20 @@
 import { SettingsType } from './types/settings';
-import { wrapper, form, name, startBtn, ans1, ans2, ans3, question, score, progress, hiddenBtn } from './dom';
+import {
+    wrapper,
+    form,
+    name,
+    upperlimit,
+    timeSlow,
+    timeFast,
+    startBtn,
+    ans1,
+    ans2,
+    ans3,
+    question,
+    score,
+    progress,
+    hiddenBtn,
+} from './dom';
 
 console.log('starting 🚀');
 
@@ -8,6 +23,12 @@ let settings: SettingsType | null = JSON.parse(localStorage.getItem('USER_SETTIN
 
 if (settings) {
     name.value = settings.name;
+    upperlimit.value = settings.upperlimit.toString();
+    if (settings.time === 'slow') {
+        timeSlow.checked = true;
+    } else {
+        timeFast.checked = true;
+    }
 }
 
 let SCORE = 0;
