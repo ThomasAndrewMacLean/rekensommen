@@ -4,7 +4,7 @@ node_js:
 before_script:
     - npm install
 script:
-    - npm run parcel-build
+    - npm run build
 deploy:
     provider: pages
     local_dir: dist

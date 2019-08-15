@@ -9,9 +9,9 @@
 
 # game
 
--   [ ] generate question
--   [ ] generate possible answers
--   [ ] show timer/countdown
+-   [x] generate question
+-   [x] generate possible answers
+-   [x] show timer/countdown
 -   [ ] get giphy api (SFW) to show funny gif every 10 exercises
 
 # database
@@ -23,7 +23,7 @@
 # design
 
 -   [ ] css grid
--   [ ] mobile phone/ tablet view
--   [ ] PWA
--   [ ] bright colours
--   [ ] fun font
+-   [x] mobile phone/ tablet view
+-   [x] PWA
+-   [x] bright colours
+-   [x] fun font

@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -36,7 +37,7 @@ button {
 form {
     background: rgba(255, 255, 255, 0.7);
     padding: 2rem;
-    width: 70vw;
+    width: 90vw;
     max-width: 350px;
     border-radius: 50px;
     border: 2px solid lightgrey;
@@ -142,10 +143,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: lightseagreen; */
     height: 150px;
-    width: 90vw;
-    max-width: 350px;
 }
 
 
@@ -176,4 +174,8 @@ h2 {
     border-radius: 50px;
     border: 2px solid lightgrey;
     box-shadow: 2px 2px 20px 0px grey;
+}
+
+progress {
+    width: 100%;
 }
