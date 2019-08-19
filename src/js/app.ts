@@ -22,8 +22,8 @@ console.log('starting 🚀');
 let settings: SettingsType | null = JSON.parse(localStorage.getItem('USER_SETTINGS') || '{}');
 
 if (settings) {
-    name.value = settings.name;
-    upperlimit.value = settings.upperlimit.toString();
+    name.value = settings.name || '';
+    upperlimit.value = (settings.upperlimit || 9).toString();
     if (settings.time === 'slow') {
         timeSlow.checked = true;
     } else {
